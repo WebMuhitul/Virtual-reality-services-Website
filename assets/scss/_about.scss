@@ -1,0 +1,82 @@
+.about-thumbs {
+	display: flex;
+	gap: 24px;
+	align-items: self-end;
+	.thumb-inner {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		.content-count {
+			background: url(../../assets/img/about/expricne-bg.png) no-repeat
+				center center;
+			background-size: cover;
+			padding: 34px 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+			align-items: center;
+			.count-item {
+				font-size: 70px;
+				font-weight: 700;
+				color: $white;
+			}
+			span {
+				font-size: 60px;
+				font-weight: 700;
+				line-height: 50px;
+				color: $white;
+			}
+			p {
+				font-size: 20px;
+				font-weight: 500;
+				font-family: $sub-font;
+				line-height: 28px;
+				color: $white;
+			}
+		}
+	}
+	@include breakpoint(max-xxl) {
+		gap: 20px;
+		align-items: self-end;
+		.thumb-inner {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.content-count {
+				padding: 34px 16px;
+				gap: 10px;
+				.count-item {
+					font-size: 36px;
+					font-weight: 700;
+					color: $white;
+				}
+				p {
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+	@include breakpoint(max-xxsmall) {
+		gap: 10px;
+		.thumb-inner {
+			gap: 10px;
+			.content-count {
+				padding: 24px 10px;
+				gap: 5px;
+				.count-item {
+					font-size: 28px;
+					font-weight: 700;
+					color: $white;
+				}
+				p {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}

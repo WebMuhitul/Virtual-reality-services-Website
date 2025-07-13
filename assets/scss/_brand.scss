@@ -1,0 +1,21 @@
+//Brand Slider
+.partner-section {
+	.swiper-slide {
+		.banner-image {
+			margin: 0 auto;
+			text-align: center;
+			img {
+				opacity: 20%;
+				transition: all 0.4s;
+			}
+		}
+		&.swiper-slide-active {
+			.banner-image {
+				img {
+					opacity: 100%;
+				}
+			}
+		}
+	}
+}
+//Brand Slider

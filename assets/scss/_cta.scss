@@ -1,0 +1,133 @@
+//Choose Section
+.choose-bg-adding {
+	z-index: 1;
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		background: url(../../assets/img/element/choose-bg.png) no-repeat center
+			center;
+		background-size: cover;
+		width: 100%;
+		height: 75%;
+		top: 0;
+	}
+	.container{
+		position: relative;
+		z-index: 1;
+	}
+}
+.choose-wrapper {
+	background: $white;
+	border-radius: 10px;
+	display: flex;
+	.choose-line {
+		border-left: 1px solid #eaeaea;
+		width: 1px;
+		height: 416px;
+	}
+	.choose-item {
+		padding: 60px 30px;
+		.icon {
+			width: 85px;
+			height: 85px;
+			transition: all 0.4s;
+			margin: 0 auto 30px;
+			&:hover {
+				background: $p1-clr;
+			}
+		}
+		h4 {
+			margin-bottom: 16px;
+		}
+		p {
+			margin-bottom: 40px;
+		}
+		.red {
+			border-radius: 6px;
+			background-color: rgb(247, 249, 251);
+			font-size: 14px;
+			font-weight: 700;
+			color: $black;
+			padding: 9px 20px;
+			display: inline-block;
+		}
+		&:hover {
+			.red {
+				background: $p1-clr;
+				color: $white;
+			}
+			.icon {
+				background: $p1-clr;
+			}
+		}
+	}
+	@include breakpoint(max-xxl) {
+		.choose-line {
+			height: 380px;
+		}
+		.choose-item {
+			padding: 40px 20px;
+			.icon {
+				width: 75px;
+				height: 75px;
+				margin: 0 auto 20px;
+				img {
+					width: 50px;
+					height: 50px;
+					object-fit: contain;
+				}
+			}
+			h4 {
+				margin-bottom: 14px;
+			}
+			p {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	@include breakpoint(max-lg) {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		.choose-line {
+			height: initial;
+		}
+	}
+	@include breakpoint(max-sm) {
+		grid-template-columns: 100%;
+		.choose-item {
+			border: 1px solid #eaeaea;
+			p {
+				max-width: 270px;
+				margin: 0 auto 24px;
+			}
+		}
+	}
+}
+//Choose Section
+
+//World Content
+.world-content {
+	h3 {
+		max-width: 800px;
+		margin: 0 auto 60px;
+		@include breakpoint(max-xxl) {
+			margin: 0 auto 40px;
+		}
+		@include breakpoint(max-lg) {
+			margin: 0 auto 30px;
+		}
+		@include breakpoint(max-md) {
+			margin: 0 auto 24px;
+		}
+	}
+	.world-thumb {
+		border-bottom-left-radius: 300px;
+		width: 100%;
+		img {
+			width: 100%;
+			border-bottom-right-radius: 300px;
+		}
+	}
+}
+//World Content

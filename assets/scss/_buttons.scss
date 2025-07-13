@@ -1,0 +1,77 @@
+//>>>>> Component Button Here <<<<<//
+
+//Btn Theme
+.common-btn {
+	position: relative;
+	padding: 19px 30px;
+	line-height: 18px;
+	transition: all 0.5s;
+	i {
+		transition: all 0.5s;
+		z-index: 1;
+	}
+	&:hover {
+		color: $black;
+	}
+	@include breakpoint(max-xxl){
+		padding: 16px 24px;
+	}
+}
+
+//Custom ANis
+@keyframes storm {
+	0% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+	25% {
+		transform: translate3d(4px, 0, 0) translateZ(0);
+	}
+	50% {
+		transform: translate3d(-3px, 0, 0) translateZ(0);
+	}
+	75% {
+		transform: translate3d(2px, 0, 0) translateZ(0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+}
+.box-style {
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	text-align: center;
+	&:hover {
+		&::before {
+			width: 400%;
+			height: 400%;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: var(--y);
+		left: var(--x);
+		transform: translate(-50%, -50%);
+		width: 0;
+		height: 0;
+		border-radius: 10px;
+		background-color: $p1-clr;
+		transition: all 0.7s ease;
+		z-index: -1;
+	}
+}
+.box-style.first-box {
+	&::before {
+		background-color: $p2-clr;
+	}
+	&:hover {
+		i {
+			color: $black;
+		}
+		span {
+			color: $black;
+		}
+	}
+}
+//>>>>> Component Button End <<<<<//

@@ -1,0 +1,178 @@
+//All Feature
+.play-in {
+	width: 124px;
+	height: 124px;
+	position: absolute;
+	transition: all 0.4s;
+	@include breakpoint(max-md) {
+		width: 75px;
+		height: 75px;
+	}
+	@include breakpoint(max-sm) {
+		width: 65px;
+		height: 65px;
+	}
+	&:hover{
+		background: $p1-clr;
+		color: $white;
+	}
+}
+//All Feature
+
+//Useit Style
+.useit-thumb {
+	.video-style {
+		width: 110px;
+		height: 110px;
+		i {
+			font-size: 24px;
+			z-index: 1;
+		}
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: $white;
+			border-radius: 50%;
+			animation: puls 2s linear infinite;
+		}
+		@include breakpoint(max-xl) {
+			width: 70px;
+			height: 70px;
+			i {
+				font-size: 20px;
+			}
+		}
+	}
+}
+@keyframes puls {
+	0% {
+		transform: scale(1.03);
+		opacity: 1;
+	}
+	20% {
+		transform: scale(1.05);
+		opacity: 0.5;
+	}
+	50% {
+		transform: scale(1.08);
+		opacity: 0.7;
+	}
+	80% {
+		transform: scale(1.1);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+.call-useit {
+	.icon {
+		border: 1px solid $black;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+	}
+}
+//Useit Style
+
+//Mission Version
+.vission-content {
+	position: relative;
+	z-index: 1;
+	.mission-box-inner {
+		gap: 24px;
+		display: flex;
+		flex-direction: column;
+		.mission-box {
+			border: 1px solid rgb(234, 234, 234);
+			padding: 28px 28px;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			background: $white;
+			.icon {
+				width: 110px;
+				min-width: 110px;
+				height: 120px;
+				background: $black;
+				transition: all 0.4s;
+			}
+			&:hover {
+				.icon {
+					background: $p1-clr;
+				}
+			}
+		}
+	}
+	padding: 55px 0 0 60px;
+	background: $white;
+	@include breakpoint(max-xxl) {
+		padding: 24px 0 0 24px;
+		.mission-box-inner {
+			gap: 18px;
+			.mission-box {
+				padding: 20px 20px;
+				gap: 18px;
+				.icon {
+					width: 90px;
+					min-width: 90px;
+					height: 100px;
+					img{
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoint(max-md) {
+		padding: 18px 0 0 18px;
+		.mission-box-inner {
+			gap: 14px;
+			.mission-box {
+				padding: 12px 12px;
+				gap: 14px;
+				.icon {
+					width: 80px;
+					min-width: 80px;
+					height: 90px;
+					img{
+						width: 50px;
+					}
+				}
+			}
+		}
+	}
+	@include breakpoint(max-sm) {
+		padding: 18px 0 0 18px;
+		.mission-box-inner {
+			gap: 14px;
+			.mission-box {
+				padding: 20px 20px;
+				gap: 14px;
+				flex-wrap: wrap;
+				justify-content: center;
+				text-align: center;
+				.cont{
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+.vissiton-thumb{
+	@include breakpoint(max-lg){
+		width: 100%;	
+		img{
+			width: 100%;
+		}
+	}
+}
+//Mission Version

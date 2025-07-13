@@ -1,0 +1,26 @@
+//Custom Slider
+.partnered-section {
+	background: url(../../assets/img/element/textslide-bg.png) no-repeat center
+		center;
+	background-size: cover;
+	padding: 60px 0;
+	.swiper-wrapper {
+		transition-timing-function: linear !important;
+	}
+	.partnered-item {
+		font-size: 30px;
+		color: $white;
+		font-family: $sub-font;
+		font-weight: 600;
+	}
+	@include breakpoint(max-lg) {
+		padding: 40px 0;
+		.partnered-item {
+			font-size: 20px;
+		}
+	}
+	@include breakpoint(max-sm) {
+		padding: 30px 0;
+	}
+}
+//Custom Slider

@@ -1,0 +1,67 @@
+//Team style
+.team-items{
+    text-align: center;
+    background-color: rgba(247, 249, 251, 0.2);
+    box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.16);
+    padding: 32px 22px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    .thumb{
+        display: block;
+        margin: 0 auto 32px;
+        max-width: 180px;
+        img{
+            width: 100%;
+        }
+    }
+    .team-social{
+        margin-top: 34px;
+        gap: 24px;
+        border: 1px solid rgb(234, 234, 234);
+        border-radius: 10px;
+        padding: 12px 26px;
+        a{
+            i{
+                color: #5f6168;
+                font-size: 19px;
+            }
+            &:hover{
+                i{
+                    color: $p1-clr;
+                }
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.16);
+        transform: translateY(5px);
+        h4{
+            a{
+                color: $p1-clr;
+            }
+        }
+    }
+    @include breakpoint(max-xxl){
+        padding: 30px 18px;
+        .thumb{
+            margin: 0 auto 24px;
+        }
+    }
+}
+.team-stoke{
+    position: absolute;
+    top: 120px;
+    right: 90px;
+    animation: rots 2s linear infinite;
+    @include breakpoint(max-xl){
+        top: 30px;
+        right: 30px;
+        width: 150px;
+    }
+    @include breakpoint(max-sm){
+        top: 10px;
+        right: 10px;
+        width: 100px;
+    }
+}
+//Team style

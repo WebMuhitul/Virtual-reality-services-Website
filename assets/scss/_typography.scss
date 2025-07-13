@@ -1,0 +1,230 @@
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+$heading-font: "Montserrat Alternates", sans-serif;
+$sub-font: "Montserrat Alternates", sans-serif;
+$body-font: "Plus Jakarta Sans", sans-serif;
+
+.heading-font {
+	font-family: $heading-font;
+}
+.sub-font {
+	font-family: $sub-font;
+}
+.body-font {
+	font-family: $body-font;
+}
+
+//font-family: "Font Awesome 6 Free";
+$fa: "Font Awesome 6 Free";
+
+html {
+	scroll-behavior: initial !important;
+}
+
+body {
+	font-family: $body-font;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 28px;
+	color: $black;
+	background-color: $white;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+input:focus {
+	color: $white;
+	outline: none;
+}
+
+input {
+	color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $heading-font;
+	margin: 0px;
+	padding: 0;
+	color: $black;
+	@include transition;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: 500;
+	line-height: 72px;
+	@include breakpoint(max-xxl) {
+		font-size: 50px;
+		line-height: 62px;
+	}
+	@include breakpoint(max-xl) {
+		font-size: 42px;
+		line-height: 52px;
+	}
+	@include breakpoint(max-lg) {
+		font-size: 38px;
+		line-height: 48px;
+	}
+	@include breakpoint(max-md) {
+		font-size: 36px;
+		line-height: 44px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
+
+h2 {
+	font-size: 52px;
+	line-height: 116%;
+	font-weight: 500;
+	@include breakpoint(max-xxl) {
+		font-size: 42px;
+	}
+	@include breakpoint(max-xl) {
+		font-size: 36px;
+	}
+	@include breakpoint(max-md) {
+		font-size: 28px;
+	}
+}
+h3 {
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 145%;
+	@include breakpoint(max-xxl) {
+		font-size: 28px;
+	}
+	@include breakpoint(max-xl) {
+		font-size: 26px;
+	}
+	@include breakpoint(max-sm) {
+		font-size: 22px;
+	}
+}
+.fs-four,
+h4 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 130%;
+	@include breakpoint(max-xxl) {
+		font-size: 22px;
+	}
+	@include breakpoint(max-xl) {
+		font-size: 20px;
+	}
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 700;
+	@include breakpoint(max-lg) {
+		font-size: 18px;
+	}
+}
+
+h6 {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 145%;
+	@include breakpoint(max-lg) {
+		font-size: 15px;
+	}
+}
+
+a {
+	text-decoration: none;
+	outline: none !important;
+	cursor: pointer;
+	color: $black;
+	@include transition;
+}
+
+p {
+	margin: 0px;
+	@include transition;
+	font-family: $body-font;
+	font-size: 16px;
+	line-height: 25.6px;
+}
+
+span {
+	font-size: 16px;
+	line-height: 25.6px;
+	margin: 0px;
+	@include transition;
+}
+
+// Custom Container
+.container {
+	@include breakpoint(xxl) {
+		max-width: 1350px;
+		margin: 0 auto;
+	}
+}
+// Custom Container
+
+// Section Hidden
+section,
+footer {
+	overflow: hidden;
+}
+// Section Hidden
+
+//radius
+.rounded100 {
+	border-radius: 100px;
+}
+
+//GLobal Center
+.d-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+//GLobal Center
+
+.trns {
+	transition: all 0.4s;
+}
+
+//Color Variables
+.p1-clr {
+	color: $p1-clr !important;
+}
+.black {
+	color: $black;
+}
+.blackbg {
+	background: $black;
+}
+.white {
+	color: $white;
+}
+.pra {
+	color: $pra;
+}

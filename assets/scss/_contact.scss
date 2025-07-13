@@ -1,0 +1,144 @@
+//Get In Touch
+.getin-touch-wrap {
+	padding: 60px 60px;
+	z-index: 1;
+	.get-in-touch {
+		input,
+		textarea {
+			width: 100%;
+			border: unset;
+			outline: none;
+			background-color: rgb(238, 238, 245);
+			border-radius: 10px;
+			padding: 14px 18px;
+			color: rgb(95, 97, 104);
+		}
+		::placeholder {
+			color: rgb(95, 97, 104);
+		}
+	}
+
+	@include breakpoint(max-md) {
+		padding: 30px 30px;
+	}
+	@include breakpoint(max-xxsmall) {
+		padding: 24px 18px;
+	}
+}
+//Get In Touch
+
+.get-shape {
+	position: absolute;
+	top: -50px;
+	left: -40px;
+	z-index: 0;
+	animation: rots 2s linear infinite;
+}
+.get-element {
+	position: absolute;
+	right: -50px;
+	bottom: -50px;
+	animation: updown 2s linear infinite;
+}
+@keyframes updown {
+	50% {
+		transform: translateY(-10px);
+	}
+}
+//Partner Get Start
+.partnert-get-wrapper {
+	background: url(../../assets/img/element/get-start-bg.png) no-repeat center
+		center;
+	background-size: cover;
+	.section-title {
+		max-width: 950px;
+		margin: 0 auto;
+	}
+}
+
+//Contact Main
+.contacts-touch {
+	textarea,
+	input {
+		background-color: $white !important;
+		border-radius: 10px;
+		box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.16);
+	}
+}
+
+//Contact Info
+.contact-info-item {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	border-radius: 10px;
+	background: $white;
+	padding: 35px 30px;
+	box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.16);
+	margin-bottom: 2px;
+	border: 1px solid $white;
+	transition: all 0.4s;
+	.icon {
+		width: 80px;
+		min-width: 80px;
+		height: 88px;
+		transition: all 0.4s;
+	}
+	&:hover {
+		border-color: $p1-clr;
+		.icon {
+			background: $p1-clr;
+		}
+	}
+	@include breakpoint(max-xxl) {
+		padding: 20px 18px;
+		gap: 12px;
+		.icon {
+			width: 60px;
+			min-width: 60px;
+			height: 60px;
+			transition: all 0.4s;
+			img{
+				width: 40px;
+			}
+		}
+	}
+}
+
+//Map style
+.map-section {
+	iframe {
+		width: 100%;
+		height: 600px;
+		margin-bottom: -8px;
+		@include breakpoint(max-lg) {
+			height: 400px;
+		}
+		@include breakpoint(max-sm) {
+			height: 300px;
+		}
+	}
+}
+
+
+//get start
+.get-starteds{
+	&::before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		content: "";
+		height: 270px;
+		background: $cmnbg;
+		z-index: -1;
+	}
+}
+
+//Left sub maintain
+.left-sub-maintain{
+	margin-left: 55px;
+	@include breakpoint(max-xxl){
+		margin-left: 35px;
+	}
+}

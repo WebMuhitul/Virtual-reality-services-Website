@@ -1,0 +1,167 @@
+//Faqs ...
+.faq-section {
+	background: url(../../assets/img/element/faq-bg1.png) no-repeat center center;
+	background-size: cover;
+}
+.faq-content {
+	.accordion-item {
+		border: 0;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: $white;
+		.accordion-header {
+			.accordion-button {
+				font-weight: 700;
+				color: $p1-clr;
+				letter-spacing: -0.2px;
+				border: 0;
+				border-radius: 0;
+				box-shadow: none;
+				background-color: $white;
+				padding: 18px 30px;
+				text-transform: capitalize;
+				font-size: 20px;
+				border: none;
+				&::after {
+					content: "\2b";
+					font-family: "Font Awesome 6 Free";
+					font-weight: 500;
+					transition: all 0.3s ease-in-out !important;
+					color: $white;
+					width: 32px;
+					height: 32px;
+					font-size: 25px;
+					border-radius: 8px;
+					background: $black;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&:not(.collapsed) {
+					&::after {
+						background: url(../../assets/img/icon/minus.png) no-repeat
+							center center;
+						background-size: 16px;
+						content: "";
+						font-weight: 500;
+						transform: rotate(0);
+						color: $p1-clr;
+						width: 32px;
+						height: 32px;
+						border-radius: 8px;
+						background-color: $black;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+				&.collapsed {
+					background-color: transparent;
+					padding: 18px 30px;
+					color: $black;
+				}
+				@include breakpoint(max-xxl) {
+					padding: 16px 20px;
+					font-size: 17px;
+					line-height: 26px;
+					&.collapsed {
+						padding: 18px 20px;
+					}
+				}
+			}
+		}
+
+		.accordion-collapse {
+			.accordion-body {
+				padding-right: 130px;
+				padding-left: 30px;
+				padding-top: 15px;
+				color: $black;
+				background-color: $white;
+				padding-bottom: 25px;
+				border-top: 1px solid #ccccd4;
+
+				@include breakpoint(max-xxl) {
+					padding-right: 50px;
+					padding-left: 20px;
+				}
+
+				@include breakpoint(max-lg) {
+					padding-right: 30px;
+				}
+			}
+		}
+	}
+}
+
+//Faqs Section two
+.faq-section-version2 {
+	.accordion-item {
+		border: 1px solid rgb(234, 234, 234);
+	}
+	.faqs-lines {
+		width: 4px;
+		height: 565px;
+		border-radius: 8px;
+		background: $black;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		&::before {
+			position: absolute;
+			left: 1px;
+			top: 4px;
+			content: "";
+			background: $p2-clr;
+			height: 40%;
+			width: 2px;
+		}
+	}
+}
+
+.faqs-helping-search {
+	form {
+		border-radius: 10px;
+		background-color: rgb(238, 238, 245);
+		padding: 8px;
+		input {
+			width: 100%;
+			padding: 14px 18px;
+			font-size: 16px;
+			color: rgb(95, 97, 104);
+			background: transparent;
+			outline: none;
+			border: unset;
+		}
+		::placeholder {
+			color: rgb(95, 97, 104);
+		}
+		button {
+			width: 55px;
+			height: 55px;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: $p1-clr;
+			i {
+				color: $white;
+				font-size: 18px;
+			}
+		}
+		@include breakpoint(max-lg){
+			padding: 4px;
+			input{
+				padding: 10px 16px;
+			}
+			button{
+				width: 44px;
+				height: 44px;
+				i{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+//Faqs Section two

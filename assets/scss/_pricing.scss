@@ -1,0 +1,47 @@
+//Pricing Section
+.pricing-section {
+	background: url(../../assets/img/element/pricing-bg.png) no-repeat center
+		center;
+	background-size: cover;
+}
+.pricing-items {
+	padding: 55px 40px;
+	background-color: rgba(255, 255, 255, 0.149);
+	box-shadow: 0px 18px 24px 0px rgba(0, 0, 0, 0.16);
+	border-radius: 10px;
+	transition: all 0.4s;
+	.basic-title {
+		margin-bottom: 30px;
+	}
+	.pricing-head {
+		border-radius: 10px;
+		padding: 20px;
+		margin-bottom: 30px;
+	}
+	p {
+		border-bottom: 1px solid $white;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+	}
+	&.regular-pack {
+		border: 1px solid #a27af2;
+	}
+	@include breakpoint(max-xxl) {
+		padding: 36px 28px;
+		.basic-title {
+			margin-bottom: 20px;
+		}
+		.pricing-head {
+			padding: 12px;
+			margin-bottom: 20px;
+		}
+		p {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	&:hover{
+		transform: translateY(-10px);
+	}
+}
+//Pricing Section
